@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Assessment 2" author="V V Ramarathinam Iyer 24BDS0350">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+
+    <style>
+        .nav-item a,
+        .nav-item a:visited {
+            text-decoration: none;       
+            color: #333;                 
+            display: inline-block;       
+            transition: all 0.3s ease;   
+        }
+
+        .nav-item a:hover {
+            color: #e63946;              
+            transform: scale(1.15);      
+        }
+
+        .nav-item a:active {
+            color: #333;                 
+            transform: scale(1.15);    
+        }
+    </style>
+    </head>
+<body>
+
+    <div class="layout-container">
+
+        <nav class="nav-container">
+            <div class="main-nav">
+                <div class="nav-item"> <a href="index.html"> About me </a></div>
+                <div class="nav-item"><a href="academics.html"> Academics </a></div>
+                <div class="nav-item"> <a href="projects.html"> Projects & Experiences</a></div>
+                <div class="nav-item"> <a href="blogs.html"> Some Blogs</a></div>
+                <div class="nav-item"> <a href="contact.html"> Contact Me </a></div>
+            </div>
+        </nav>
+
+        <header class="page-heading">
+            V V Ramarathinam Iyer
+        </header>
+
+        <nav class="nav-container">
+            <div class="sub-nav">
+                <div class="nav-item"> <a href="#aboutme"> Who am I - Get to Know me</a></div>
+                <div class="nav-item"> <a href="#dailyLife"> My Daily Life </a></div>
+                <div class="nav-item"> <a href="#love"> Things I love</a></div>
+            </div>
+        </nav>
+
+        <section class="section-know-me" id="aboutme">
+            <h2 class="section-title">Get To Know Me</h2>
+            
+            <div class="know-me-content">
+                <div class="know-me-photo-wrapper">
+                    <div class="image-placeholder"> <img src="./assets/myface.jpg" alt="My photo"></div>
+                </div>
+                <div class="know-me-text">
+                    <p>Text of the webpage goes here. The heading is now above this entire block, so the photo will not push the heading down.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-daily-life" id="dailyLife">
+            <div class="center-title">
+                <h2 class="section-title">My Daily Life</h2>
+            </div>
+            
+            <div class="daily-life-content">
+                <div class="daily-life-box">
+                    <p>
+                        Here is a paragraph about your daily life. You can describe your 
+                        routine, your favorite times of the day, or how you generally 
+                        spend your time. This box has the #DBA159 background.
+                    </p>
+                </div>
+
+                <div class="daily-life-box">
+                    <ul>
+                        <li>Morning Routine</li>
+                        <li>College / Work</li>
+                        <li>Evening Relaxation</li>
+                        <li>Coding Practice</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-things-love" id="life">
+            <div class="center-title">
+                <h2 class="section-title">Things I love</h2>
+            </div>
+            
+            <div class="things-love-grid">
+                <div class="things-love-photo-wrapper">
+                    <div class="image-placeholder"> <img src="./assets//kohli.jpg" alt=" A photo of Virat Kohli"></div>
+                </div>
+                
+                <div class="things-love-text">
+                    <p>
+                        This is the space for your paragraphs between the two photos. 
+                        You can write multiple paragraphs here describing the things you love, 
+                        and it will stay centered between the left and right images.
+                    </p>
+                </div>
+
+                <div class="things-love-photo-wrapper">
+                    <div class="image-placeholder">
+                        <img src="/assets/novak.jpg" alt="A photo of Novak Djokovic">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
