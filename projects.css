@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: #A3A380;
     
     /* BACKGROUND IMAGE SETUP */
     background-image: url('./assets/your-background-image.jpg'); 
@@ -23,7 +23,7 @@ body {
     max-width: 1200px;
     margin: 40px auto;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: #D8A48F;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     display: flex;
@@ -33,6 +33,7 @@ body {
 
 /* --- HEADINGS --- */
 .page-heading {
+    color: #000;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
@@ -59,7 +60,7 @@ h2.section-title {
     position: relative; /* Needed for absolute positioning of Group 2 */
     width: 100%;
     min-height: 200px; /* Adjust based on your image sizes */
-    border: 2px dashed #ccc; /* Visual guide */
+    border: 2px #ccc; /* Visual guide */
     border-radius: 8px;
     background-color: #fff;
     cursor: pointer; /* Hints to user that they can interact */
@@ -103,19 +104,37 @@ h2.section-title {
 }
 
 /* Image styling within the stack */
+/* --- Updated Tech Icon Styles --- */
+
 .tech-icon {
-    width: 100px; /* Adjust size as needed */
+    /* 1. Set the fixed size of the box */
+    width: 100px;  
     height: 100px;
-    background-color: #eee; /* Placeholder color */
+    
+    /* 2. Style the background box */
+    background-color: #fff; /* White background usually looks better for logos */
+    border: 1px solid #ddd;
     border-radius: 8px;
+    
+    /* 3. Center the image inside */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    
+    /* 4. Visual polish */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensures nothing spills out */
 }
 
-/* --- TABLE STYLES (Projects & Experience) --- */
+/* NEW RULE: Control the image itself */
+.tech-icon img {
+    width: 80%;   /* Use 80% so there is a little padding/breathing room */
+    height: 80%;
+    object-fit: contain; /* CRITICAL: Ensures the logo fits inside without stretching/cropping */
+    display: block;
+}
+
+
 .table-wrapper {
     overflow-x: auto;
     margin-bottom: 10px;
@@ -135,19 +154,22 @@ th, td {
 }
 
 th {
-    background-color: #333;
+    background-color: #0E1428;
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-tr:nth-child(even) { background-color: #f2f2f2; }
+tr:nth-child(even) { 
+    background-color: #82DDF0;
+    color:firebrick;
+ }
 tr:hover { background-color: #eaeaea; }
 
 /* --- NAVIGATION STYLES --- */
 .nav-container {
     border: 2px solid #333;
-    background-color: #fff;
+    background-color: #B79CED;
     padding: 15px;
     border-radius: 4px;
     margin-top: auto; /* Pushes to bottom if container has height */
@@ -179,7 +201,7 @@ tr:hover { background-color: #eaeaea; }
 }
 
 .nav-item a:hover {
-    color: #e63946;
+    color: #1E2D24;
     transform: scale(1.15);
 }
 

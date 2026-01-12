@@ -1,0 +1,132 @@
+/* --- RESET & BASIC STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    
+    /* BACKGROUND IMAGE SETUP */
+    background-image: url('./assets/your-background-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* --- MAIN CONTAINER --- */
+.layout-container {
+    width: 90%;
+    max-width: 800px; /* Narrower container for a contact card look */
+    margin: 60px auto; /* More top margin to center it vertically */
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center; /* Centers everything by default */
+}
+
+/* --- HEADINGS --- */
+h1.page-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    border-bottom: 3px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: inline-block; /* Border only spans text width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- CONTACT INFO SECTION (Semantic Address Tag) --- */
+.contact-info {
+    font-style: normal; /* Removes default italic styling of address tag */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 1.2rem;
+}
+
+/* Grouping rows */
+.contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between items in the same row */
+    flex-wrap: wrap;
+}
+
+/* Link Styling within Contact Info */
+.contact-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 10px;
+    border: 1px solid transparent; /* Prevents layout shift on hover if you add border later */
+}
+
+.contact-link:hover {
+    color: #e63946;
+    transform: scale(1.1);
+}
+
+/* Specific style for the physical address */
+.physical-address {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 500;
+}
+
+/* --- NAVIGATION STYLES (Reused) --- */
+.nav-container {
+    border-top: 2px solid #ddd; /* Subtle separator */
+    padding-top: 30px;
+    margin-top: auto;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    border: 1px solid #333;
+    min-width: 120px;
+    background-color: #fff;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 12px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-item a:hover {
+    background-color: #e63946;
+    color: white; /* Invert colors for nav hover */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .contact-row {
+        flex-direction: column; /* Stack phone/email on mobile */
+        gap: 15px;
+    }
+    .nav-row {
+        flex-direction: column;
+    }
+}
