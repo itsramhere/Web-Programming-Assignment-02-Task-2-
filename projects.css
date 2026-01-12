@@ -161,8 +161,8 @@ th {
 }
 
 tr:nth-child(even) { 
-    background-color: #82DDF0;
-    color:firebrick;
+    background-color: #F6C28B;
+    color:navy;
  }
 tr:hover { background-color: #eaeaea; }
 

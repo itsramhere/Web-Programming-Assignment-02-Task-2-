@@ -8,12 +8,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    
-    /* BACKGROUND IMAGE SETUP */
-    background-image: url('./assets/your-background-image.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     min-height: 100vh;
 }
 
@@ -23,7 +17,10 @@ body {
     max-width: 800px; /* Narrower container for a contact card look */
     margin: 60px auto; /* More top margin to center it vertically */
     padding: 50px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-image: url('assets/contactMeBg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     display: flex;
