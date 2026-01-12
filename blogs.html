@@ -18,20 +18,57 @@
 
             <article class="blog-post">
                 <div class="blog-meta-box">
-                    <h2>The Future of AI</h2>
-                    <time class="blog-date" datetime="2024-03-15T14:30">March 15, 2024 &bull; 2:30 PM</time>
+                    <h2>DNS—The Internet’s Directory Service </h2>
+                    <time class="blog-date" datetime="2025-12-20T14:30">December 21, 2026 &bull; 2:30 PM</time>
                 </div>
                 
                 <div class="blog-content">
                     <p>
-                        Artificial Intelligence is rapidly evolving. In this blog post, I discuss the implications 
-                        of Large Language Models on software development. From code generation to automated testing, 
-                        the landscape is shifting beneath our feet.
+                        Just as humans can be identified in many ways, so too can Internet hosts. One identifier for a host is its hostname.
+                        Hosts are also identified by so-called IP addresses.  An IP address consists of four bytes and has a rigid hierarchical 
+                        structure. An IP address looks like 121.7.106.83, where each period separates one of the bytes expressed in decimal 
+                        notation from 0 to 255.
                     </p>
                     <br>
                     <p>
-                        However, the human element remains crucial. We explore why empathy and architectural thinking 
-                        cannot yet be replicated by machines.
+                            This is the main task of the Internet’s domain name system (DNS). The DNS is (1) a distributed database implemented 
+                            in a hierarchy of DNS servers, and (2) an application-layer protocol that allows hosts to query the distributed 
+                            database
+                    </p>
+                    <br>
+                    <p>
+                        DNS provides a few other important services in addition to translating hostnames to IP addresses: 
+                        <dl>
+                            <dt>
+                                <b> Host aliasing </b>
+                            </dt>
+                            <dd>
+                                 A host with a complicated hostname can have one or more alias names.  Alias hostnames,
+                                when present, are typically more mnemonic than canonical hostnames. 
+                            </dd>
+                            <br>
+                            <dt> <b> Mail server aliasing </b></dt>
+                            <dd>
+                                
+                                    For obvious reasons, it is highly desirable that e-mail addresses be mnemonic. DNS can be
+                                    invoked by a mail application to obtain the canonical hostname for a supplied alias hostname
+                                    as well as the IP address of the host.
+                                
+                            </dd>
+                            <br>
+                            <dt> <b> Load distribution </b>  </dt>
+                            <dd>
+                                
+                                    DNS is also used to perform load distribution among replicated servers, such as replicated Web servers.
+                                    For replicated Web servers, a set of IP addresses is thus associated with one canonical hostname.
+                                    The DNS database contains this set of IP addresses. When clients make a DNS query for a name
+                                    mapped to a set of addresses, the server responds with the entire set of IP addresses, but rotates the 
+                                    ordering of the addresses within each reply. Because a client typically sends its HTTP request message to 
+                                    the IP address that is listed first in the set, DNS rotation distributes the traffic among
+                                    the replicated servers.
+                                
+                            </dd>
+                        </dl>
                     </p>
                 </div>
             </article>

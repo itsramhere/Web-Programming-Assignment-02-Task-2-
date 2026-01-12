@@ -1,4 +1,3 @@
-/* --- RESET & BASIC STYLES --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,18 +5,14 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
     color: #A3A380;
-    
-    /* BACKGROUND IMAGE SETUP */
-    background-image: url('./assets/your-background-image.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
 }
 
-/* --- MAIN CONTAINER --- */
 .layout-container {
     width: 90%;
     max-width: 1200px;
@@ -28,10 +23,9 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    gap: 50px; /* Spacing between main sections */
+    gap: 50px;
 }
 
-/* --- HEADINGS --- */
 .page-heading {
     color: #000;
     text-align: center;
@@ -50,23 +44,19 @@ h2.section-title {
     padding-left: 15px;
 }
 
-/* --- TECH STACK (HOVER SWAP LOGIC) --- */
 .tech-stack-section {
     text-align: center;
 }
 
-/* The Wrapper determines the height of the area */
 .tech-stack-wrapper {
-    position: relative; /* Needed for absolute positioning of Group 2 */
+    position: relative;
     width: 100%;
-    min-height: 200px; /* Adjust based on your image sizes */
-    border: 2px #ccc; /* Visual guide */
+    min-height: 200px;
+    border: 2px #ccc;
     border-radius: 8px;
     background-color: #fff;
-    cursor: pointer; /* Hints to user that they can interact */
 }
 
-/* Common style for both groups of images */
 .tech-group {
     width: 100%;
     height: 100%;
@@ -74,17 +64,15 @@ h2.section-title {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* GROUP 1: Visible by default */
 .group-1 {
     opacity: 1;
-    position: relative; /* Sits naturally in the flow */
+    position: relative;
     z-index: 2;
 }
 
-/* GROUP 2: Hidden by default, sits ON TOP of Group 1 */
 .group-2 {
     opacity: 0;
     position: absolute;
@@ -93,47 +81,34 @@ h2.section-title {
     z-index: 1;
 }
 
-/* HOVER EFFECT: When hovering the wrapper... */
 .tech-stack-wrapper:hover .group-1 {
-    opacity: 0; /* Hide Group 1 */
+    opacity: 0;
 }
 
 .tech-stack-wrapper:hover .group-2 {
-    opacity: 1; /* Show Group 2 */
-    z-index: 3; /* Bring to front */
+    opacity: 1;
+    z-index: 3;
 }
 
-/* Image styling within the stack */
-/* --- Updated Tech Icon Styles --- */
-
 .tech-icon {
-    /* 1. Set the fixed size of the box */
-    width: 100px;  
+    width: 100px;
     height: 100px;
-    
-    /* 2. Style the background box */
-    background-color: #fff; /* White background usually looks better for logos */
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    
-    /* 3. Center the image inside */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* 4. Visual polish */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    overflow: hidden; /* Ensures nothing spills out */
+    overflow: hidden;
 }
 
-/* NEW RULE: Control the image itself */
 .tech-icon img {
-    width: 80%;   /* Use 80% so there is a little padding/breathing room */
+    width: 80%;
     height: 80%;
-    object-fit: contain; /* CRITICAL: Ensures the logo fits inside without stretching/cropping */
+    object-fit: contain;
     display: block;
 }
-
 
 .table-wrapper {
     overflow-x: auto;
@@ -147,7 +122,8 @@ table {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -160,19 +136,21 @@ th {
     text-transform: uppercase;
 }
 
-tr:nth-child(even) { 
+tr:nth-child(even) {
     background-color: #F6C28B;
-    color:navy;
- }
-tr:hover { background-color: #eaeaea; }
+    color: navy;
+}
 
-/* --- NAVIGATION STYLES --- */
+tr:hover {
+    background-color: #eaeaea;
+}
+
 .nav-container {
     border: 2px solid #333;
     background-color: #B79CED;
     padding: 15px;
     border-radius: 4px;
-    margin-top: auto; /* Pushes to bottom if container has height */
+    margin-top: auto;
 }
 
 .nav-row {
@@ -190,7 +168,6 @@ tr:hover { background-color: #eaeaea; }
     min-width: 120px;
 }
 
-/* Link Interactions */
 .nav-item a,
 .nav-item a:visited {
     text-decoration: none;
@@ -210,15 +187,16 @@ tr:hover { background-color: #eaeaea; }
     transform: scale(1.15);
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .tech-group {
         flex-wrap: wrap;
         gap: 10px;
     }
+
     .tech-icon {
-        width: 45%; /* 2x2 grid on mobile */
+        width: 45%;
     }
+
     .nav-row {
         flex-direction: column;
     }

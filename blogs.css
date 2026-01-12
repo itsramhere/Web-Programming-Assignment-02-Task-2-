@@ -1,4 +1,3 @@
-/* --- RESET & BASIC STYLES --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,19 +5,18 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Libre Baskerville", Georgia, serif;
     color: #333;
-    background-color:#FFED66;
+    background-color: #FFED66;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
 }
 
-/* --- MAIN CONTAINER --- */
 .layout-container {
     width: 90%;
-    max-width: 1000px; /* Slightly narrower for better reading experience */
+    max-width: 1000px;
     background-color: #FFFFEA;
     margin: 40px auto;
     padding: 40px;
@@ -29,7 +27,6 @@ body {
     gap: 40px;
 }
 
-/* --- HEADINGS --- */
 .page-heading {
     text-align: center;
     font-size: 2rem;
@@ -39,11 +36,10 @@ body {
     border-bottom: 3px solid #333;
 }
 
-/* --- BLOG POST STYLES --- */
 .blog-list {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Space between different blog posts */
+    gap: 40px;
 }
 
 .blog-post {
@@ -56,36 +52,34 @@ body {
     gap: 20px;
 }
 
-/* The "Box" for Title and Date */
 .blog-meta-box {
     border: 1px solid #666;
-    background-color: #336699; /* Light grey to distinguish header */
+    background-color: #336699;
     padding: 15px 20px;
     border-radius: 4px;
-    width: fit-content; /* Shrinks to fit text, like in wireframe */
-    min-width: 250px;   /* Ensures it's not too small */
+    width: fit-content;
+    min-width: 250px;
 }
 
 .blog-meta-box h2 {
     font-size: 1.3rem;
     margin-bottom: 5px;
-    color:gold; /* Accent color for title */
+    color: gold;
 }
 
 .blog-date {
     font-size: 0.9rem;
-    color:aqua;
+    color: aqua;
     font-style: italic;
-    display: block; /* Ensures date sits on its own line */
+    display: block;
 }
 
 .blog-content {
     font-size: 1.1rem;
-    line-height: 1.7; /* Good line height for reading blocks of text */
+    line-height: 1.7;
     text-align: justify;
 }
 
-/* --- NAVIGATION STYLES --- */
 .nav-container {
     border: 2px solid #333;
     background-color: #4D5057;
@@ -110,7 +104,6 @@ body {
     background-color: #1C77C3;
 }
 
-/* Link Interactions */
 .nav-item a,
 .nav-item a:visited {
     text-decoration: none;
@@ -121,7 +114,7 @@ body {
 }
 
 .nav-item a:hover {
-    color:chartreuse;
+    color: chartreuse;
     transform: scale(1.15);
 }
 
@@ -130,11 +123,11 @@ body {
     transform: scale(1.15);
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .blog-meta-box {
-        width: 100%; /* Full width header on mobile */
+        width: 100%;
     }
+
     .nav-row {
         flex-direction: column;
     }
